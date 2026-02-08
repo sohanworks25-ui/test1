@@ -1,0 +1,14 @@
+{% extends "core/base.html" %}
+{% block content %}
+<div class="card shadow-sm">
+    <div class="card-body">
+        <h4 class="card-title">Create Pathology Bill</h4>
+        <p class="text-muted">Add pathology tests from the admin panel after creating a bill.</p>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary" type="submit">Save</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
