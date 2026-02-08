@@ -1,0 +1,32 @@
+{% extends "core/base.html" %}
+{% block content %}
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Patients</h5>
+                <p class="display-6">{{ patient_count }}</p>
+                <a class="btn btn-sm btn-outline-primary" href="{% url 'patient-new' %}">Register Patient</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">OPD Bills</h5>
+                <p class="display-6">{{ opd_count }}</p>
+                <a class="btn btn-sm btn-outline-primary" href="{% url 'opd-bill-new' %}">Create OPD Bill</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Pathology Bills</h5>
+                <p class="display-6">{{ pathology_count }}</p>
+                <a class="btn btn-sm btn-outline-primary" href="{% url 'pathology-bill-new' %}">Create Pathology Bill</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
